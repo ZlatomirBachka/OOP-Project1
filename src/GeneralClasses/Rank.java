@@ -1,0 +1,5 @@
+package GeneralClasses;
+
+public enum Rank {
+    YOUNGLING, INITIATE, PADAWAN, KNIGHT_ASPIRANT, KNIGHT, MASTER, BATTLE_MASTER;
+}
