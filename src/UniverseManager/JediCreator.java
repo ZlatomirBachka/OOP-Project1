@@ -4,10 +4,10 @@ import GeneralClasses.Jedi;
 import GeneralClasses.Planet;
 import GeneralClasses.Universe;
 import GeneralClasses.Rank;
-import u.PlanetChecker;
+import util.PlanetChecker;
 
 public class JediCreator {
-    public void create_jedi(String planet_name, String jedi_name, Rank jedi_rank, short jedi_age, String saber_color, byte jedi_strength) {
+    public void create_jedi(String planet_name, String jedi_name, Rank jedi_rank, short jedi_age, String saber_color, float jedi_strength) {
         Universe universe = Universe.getInstance();
 
         if (universe.getPlanets().isEmpty()) {

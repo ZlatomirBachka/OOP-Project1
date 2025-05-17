@@ -2,8 +2,7 @@ package UniverseManager;
 
 import GeneralClasses.Jedi;
 import GeneralClasses.Planet;
-import GeneralClasses.Universe;
-import u.PlanetChecker;
+import util.PlanetChecker;
 
 public class JediRemover {
     public void removeJedi (String jedi_name, String planet_name) {

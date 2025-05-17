@@ -1,25 +1,23 @@
 package GeneralClasses;
 
-public class Jedi {
+import java.io.Serializable;
+
+public class Jedi implements Serializable {
     private String jediName;
     private Rank rank;
     private short age;
     private String lightsaberColor;
-    private byte strength;
+    private float strength;
 
-    public Jedi(String jediName, Rank rank, short age, String lightsaberColor, byte strength) {
-        if (strength != 1 && strength != 2) {
-            throw new IllegalArgumentException("Jedi strength must be 1 or 2.");
+    public Jedi(String jediName, Rank rank, short age, String lightsaberColor, float strength) {
+        if (strength < 1.0f || strength > 2.0f) {
+            throw new IllegalArgumentException("Jedi strength must be between 1.0 and 2.0.");
         }
         this.jediName = jediName;
         this.rank = rank;
         this.age = age;
         this.lightsaberColor = lightsaberColor;
         this.strength = strength;
-    }
-
-    public static boolean isValidStrength(byte strength) {
-        return strength == 1 || strength == 2;
     }
 
     public String getJediName() {
@@ -38,7 +36,7 @@ public class Jedi {
         return lightsaberColor;
     }
 
-    public byte getStrength() {
+    public float getStrength() {
         return strength;
     }
 
@@ -58,10 +56,7 @@ public class Jedi {
         this.lightsaberColor = lightsaberColor;
     }
 
-    public void setStrength(byte strength) {
-        if (strength != 1 && strength != 2) {
-            throw new IllegalArgumentException("Jedi strength must be 1 or 2.");
-        }
+    public void setStrength(float strength) {
         this.strength = strength;
     }
 }

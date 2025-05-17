@@ -2,7 +2,7 @@ package UniverseManager;
 
 import GeneralClasses.Planet;
 import GeneralClasses.Universe;
-import u.PlanetChecker;
+import util.PlanetChecker;
 
 public class PlanetAdder {
     public void add_planet(String planetName) {
